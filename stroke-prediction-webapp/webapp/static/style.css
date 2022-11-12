@@ -1,0 +1,178 @@
+
+body{
+    background-color: #e0f5de;
+}
+
+
+.prediction-group {
+    display: flex;
+    justify-content:center;
+}
+
+.form-title{
+    text-align: center;
+    border-bottom: 3px solid;
+    box-shadow: black;
+}
+
+.group_1{
+    width: 15%;
+    margin:5%;
+}
+
+.group_2{
+    width: 15%;
+    margin:5%;
+}
+
+.group_3{
+    width: 15%;
+    margin:5%;
+}
+.group_4{
+    width: 15%;
+    margin:5%;
+}
+
+.check-group{
+    display: grid;
+    justify-content:center;
+    text-align: center;
+
+}
+
+button.submit-btn {
+    border: none;
+    background-color: #f8df1d;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button.redirect-btn {
+    border: none;
+    background-color: #f8df1d;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+
+.form-group-redirect{
+    display: grid;
+    justify-content: center;
+}
+
+.result{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.result img{
+    width: auto;
+    height: auto;
+}
+
+.recommendations{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.recommendation-list-container{
+    display:grid;
+}
+
+.recommendation-list {
+    margin-top: 2%;
+    list-style-type:none;
+    justify-content:center;
+    text-align:center;
+    margin-left: 30%;
+    margin-right: 30%;
+   
+}
+
+.avg{
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px rgb(68, 68, 68);
+
+}
+
+.weight{
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px rgb(68, 68, 68);
+
+}
+
+.work{
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px rgb(68, 68, 68);
+}
+
+
+.img-content {
+    animation: pulse 2s linear infinite;
+}
+
+@-webkit-keyframes pulse {
+0% {
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+50% {
+-webkit-transform: scale(0.8);
+transform: scale(0.8);
+}
+100% {
+ -webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+
+.output {
+    border-bottom: 2px black solid;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #e0f5de;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    justify-content: flex-end;
+}
+
+.nav-list { 
+    list-style-type:none;
+}
+
+.nav-link{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.login-content {
+
+    justify-content: center;
+    display: grid;
+
+}
+
+.message-container{
+    justify-content: center;
+    display: grid;
+
+}
+
+.admin-content {
+
+    justify-content: center;
+    display: grid;
+
+}

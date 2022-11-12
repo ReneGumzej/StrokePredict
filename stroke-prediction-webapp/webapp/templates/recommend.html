@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="">
+    {{ form.csrf_token }}
+        <fieldset class="form-group">
+        <div class="recommendation-content">
+            <div class="result">
+                <img class="img-content" src="{{ url_for('static', filename='toxic.png') }}" alt="">
+                <h1>YOU GOT A RISK TO GET A STROKE</h1>
+                <img class="img-content" src="{{ url_for('static', filename='toxic.png') }}" alt="">
+            </div>
+            <div class="recommendations">
+                <h2>Recommendations to decrease stroke prediction risk:</h2> 
+                <div class="recommendation-list-container">
+                    {% for recommends in recommendations %}
+                    <ul class="recommendation-list">
+                        <li> reduce <b>{{ recommends }}</b> to <b>{{ recommendations[recommends] }}</b>
+                        {% if "avg_glucose_level" in recommends %}
+                        <p class="avg">A diet commonly known as the "Mediterranean diet" is good for the blood vessels. This means eating lots of fruit and vegetables, nuts, olive oil instead of butter for frying, less sausage and meat on the plate, and more fish instead.</p>
+                        {% endif %}
+                        {% if "weight" in recommends %}
+                        <p class="weight">Being overweight leads to high blood pressure, puts strain on bones and joints, and increases the risk of developing diabetes. The risk of an overweight person suffering a stroke is increased by one to two times compared to a normal-weight person.</p>
+                        {% endif %}
+                        {% if "work_type" in recommends%}
+                        <p class="work">People who take little or no exercise have a significantly increased risk of developing high blood pressure and arteriosclerosis. This is particularly true for people who are also predominantly sedentary in their work. Endurance exercise that makes you sweat easily, such as walking, swimming or fast walking, is ideal. Duration and intensity depend on the individual's fitness level.</p>
+                        {% endif %}
+                        </li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </fieldset>        
+        <div class="form-group-redirect">
+            <button class="redirect-btn">{{ form.redirect_button(class="btn btn-lg") }}</button>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}
